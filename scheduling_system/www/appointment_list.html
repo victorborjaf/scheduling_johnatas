@@ -1,0 +1,14 @@
+{% extends "templates/web.html" %}
+{% block page_content %}
+<h2>Todas as reuniões</h2>
+<table class="table">
+    <tr><th>Cliente</th><th>Data</th><th>Status</th></tr>
+    {% for appointment in appointments %}
+    <tr>
+        <td>{{ appointment.client_name }}</td>
+        <td>{{ appointment.start_date }}</td>
+        <td>{{ appointment.status }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
